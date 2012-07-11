@@ -1,0 +1,19 @@
+body {
+background-color: #EEEEEE;
+}
+#homeCont{
+background-color: #EEEEEE;
+width:500px;
+text-align:center;
+margin:60px auto 0 auto; 
+position: relative;
+}
+table, td, th{
+border: 2px solid #236B8E;
+background-color: #FFFFFF;
+}
+
+table th{
+background-color:#236B8E;
+color:white;
+}

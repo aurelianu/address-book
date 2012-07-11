@@ -1,0 +1,36 @@
+
+ways you can do a form
+
+<%= form_tag( search_addresses_path(), :method => 'get') do %>
+    <%= text_field_tag :q, params[:q]  %>
+    <%= submit_tag "Search" %>
+<% end %>
+
+<hr>
+
+<%= form_tag( "/addresses/search", :method => 'get') do %>
+    <%= text_field_tag :q, params[:q], :placeholder => 'search for'  %>
+    <%= submit_tag "Search" %>
+<% end %>
+
+<hr>
+
+<form action='/addresses/search' method='get'>
+  <input type='text' name='q' placeholder='Search forrr'>
+  <input type='submit' value='Search'>
+</form>
+
+<hr>
+
+<%= form_tag( url_for( :controller => "addresses", :action => "search" ) , :method => 'get') do %>
+    <%= text_field_tag :q, params[:q]  %>
+    <%= submit_tag "Search" %>
+<% end %>
+
+<hr>
+
+<%= render 'search_results' %>
+
+
+
+<%= ActiveRecord::Base.logger = Logger.new(STDOUT) %>

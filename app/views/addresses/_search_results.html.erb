@@ -1,0 +1,6 @@
+<ul>
+  <% @addresses.each do |address| %>
+      <li><%= link_to address.name + " " + address.surname,
+                      :action => 'show', :id => address.id  %></li>
+  <% end %>
+</ul>
